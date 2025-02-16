@@ -81,3 +81,21 @@
     </footer>
 </body>
 </html>
+<head>
+    <style>
+        body {
+            user-select: none; /* Impede seleção de texto */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault()); // Bloqueia botão direito
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && (event.key === "c" || event.key === "x" || event.key === "v")) {
+                event.preventDefault(); // Bloqueia Ctrl + C, Ctrl + X e Ctrl + V
+            }
+        });
+    </script>
+</head>
